@@ -1,11 +1,11 @@
 import React from "react";
 import countries from "../data/countries";
 import cities from "../data/cities";
-import Field from "./Field"
-import Basic from "./Basic"
-import Contacts from "./Contacts"
-import Avatar from "./Avatar"
-import Finish from "./Finish"
+import Field from "./Field";
+import Basic from "./Basic";
+import Contacts from "./Contacts";
+import Avatar from "./Avatar";
+import Finish from "./Finish";
 
 
 
@@ -39,48 +39,6 @@ export default class App extends React.Component {
       }
     };
   }
-
-  onChangeFirstName = event => {
-    this.setState({
-      firstname: event.target.value
-    });
-  };
-
-  onChangeLastName = event => {
-    this.setState({
-      lastname: event.target.value
-    });
-  };
-
-  onChangePassword = event => {
-    this.setState({
-      password: event.target.value
-    });
-  };
-
-  onChangeRepeatPassword = event => {
-    this.setState({
-      repeatPassword: event.target.value
-    });
-  };
-
-  onChangeGender = event => {
-    this.setState({
-      gender: event.target.value
-    });
-  };
-
-  onChangeEmail = event => {
-    this.setState({
-      email: event.target.value
-    });
-  };
-
-  onChangeMobile = event => {
-    this.setState({
-      mobile: event.target.value
-    });
-  };
 
   onChange = event => {
     this.setState({
@@ -175,37 +133,7 @@ export default class App extends React.Component {
 
       <div className="form-container card">
         <form className="form card-body">
-          <Basic
-           firstname={this.state.firstname}
-           lastname={this.state.lastname}
-           onChange={this.onChange}
-           errors={this.state.errors}
-          />
-
-          <Contacts
-          email={this.state.email}
-          mobile={this.state.mobile}
-          country={this.state.country}
-          city={this.state.city}
-          onChange={this.onChange}
-          errors={this.state.errors}
-        />
-        <Avatar
-        avatar={this.state.avatar}
-        onChange={this.onChange}
-        errors={this.state.errors}
-        />
-        <Finish
-        firstname={this.state.firstname}
-        lastname={this.state.lastname}
-        email={this.state.email}
-        mobile={this.state.mobile}
-        country={this.state.country}
-        city={this.state.city}
-        avatar={this.state.avatar}
-        />
-
-          <div className="steps mb-4">
+        <div className="steps mb-4">
             <div
               className={`step ${
                 1 <= this.state.currentStep ? "is-active" : ""
@@ -242,13 +170,15 @@ export default class App extends React.Component {
               <div className="step__title mt-1">Finish</div>
             </div>
           </div>
-
-
-         {/* -------------------------- 1 STEP ---------------------------------- */}
-         {this.state.currentStep === 1 ? (
+    {/* -------------------------- 1 STEP ---------------------------------- */}
+        {this.state.currentStep === 1 ? (
           <div>
-         
-
+          <Basic
+          firstname={this.state.firstname}
+          lastname={this.state.lastname}
+          onChange={this.onChange}
+          errors={this.state.errors}
+         />
             <div className="form-check">
               <div>Gender</div>
               <div className="form-check">
@@ -265,7 +195,6 @@ export default class App extends React.Component {
                   Male
                 </label>
               </div>
-
               <div className="form-check">
                 <input
                   className="form-check-input"
@@ -283,31 +212,43 @@ export default class App extends React.Component {
             </div>
           </div>
         ) : null}
-
-        {/* -------------------------- 2 STEP ---------------------------------- */}
-        {this.state.currentStep === 2 ? (
-          <div>
-           
-            
-
-          </div>
+{/* -------------------------- 2 STEP ---------------------------------- */}
+          {this.state.currentStep === 2 ? (
+            <div>
+         <Contacts
+          email={this.state.email}
+          mobile={this.state.mobile}
+          country={this.state.country}
+          city={this.state.city}
+          onChange={this.onChange}
+          errors={this.state.errors}
+        />
+        </div>
         ) : null}
-
-        {/* -------------------------- 3 STEP ---------------------------------- */}
+{/* -------------------------- 3 STEP ---------------------------------- */}
         {this.state.currentStep === 3 ? (
           <div>
-           
-          </div>
+        <Avatar
+        avatar={this.state.avatar}
+        onChange={this.onChange}
+        errors={this.state.errors}
+        />
+        </div>
         ) : null}
-
-        {/* -------------------------- 4 STEP ---------------------------------- */}
+{/* -------------------------- 4 STEP ---------------------------------- */}
         {this.state.currentStep === 4 ? (
           <div>
-            
-          
-          </div>
+        <Finish
+        firstname={this.state.firstname}
+        lastname={this.state.lastname}
+        email={this.state.email}
+        mobile={this.state.mobile}
+        country={this.state.country}
+        city={this.state.city}
+        avatar={this.state.avatar}
+        />
+        </div>
         ) : null}
-
         <div className="d-flex justify-content-center">
           <button
             type="button"
