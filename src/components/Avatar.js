@@ -14,7 +14,6 @@ import Field from "./Field"
               name="avatar"
               value={props.avatar}
               onChange={props.onChange}
-              
             />
             
           </div>
