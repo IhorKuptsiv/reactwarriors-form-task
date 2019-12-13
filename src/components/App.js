@@ -226,15 +226,15 @@ export default class App extends React.Component {
         </div>
         ) : null}
 {/* -------------------------- 3 STEP ---------------------------------- */}
-        {this.state.currentStep === 3 ? (
-          <div>
-        <Avatar
-        avatar={this.state.avatar}
-        onChange={this.onChange}
-        errors={this.state.errors}
-        />
-        </div>
-        ) : null}
+  {this.state.currentStep === 3 ? (
+  <div>
+    <Avatar
+      avatar={this.state.avatar}
+      onChangeAvatar={this.onChangeAvatar}
+      errors={this.state.errors}
+    />
+  </div>
+) : null}
 {/* -------------------------- 4 STEP ---------------------------------- */}
         {this.state.currentStep === 4 ? (
           <div>

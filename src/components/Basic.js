@@ -2,30 +2,29 @@ import React from "react"
 import Field from "./Field"
 
 const Basic = props => {
-    return (
-      <div>
-      
-        <Field
-          id="firstname"
-          labelText="Firstname"
-          type="text"
-          placeholder="Enter firstname"
-          name="firstname"
-          value={props.firtname}
-          onChange={props.onChange}
-          error={props.errors.firtname}
-        />
-        <Field
-          id="lastname"
-          labelText="Lastname"
-          type="text"
-          placeholder="Enter lastname"
-          name="lastname"
-          value={props.lastname}
-          onChange={props.onChange}
-          error={props.errors.lastname}
-        />
-        <Field
+  return (
+    <div>
+      <Field
+        id="firstname"
+        labelText="Firstname"
+        type="text"
+        placeholder="Enter firstname"
+        name="firstname"
+        value={props.firtname}
+        onChange={props.onChange}
+        error={props.errors.firstname}
+      />
+      <Field
+        id="lastname"
+        labelText="Lastname"
+        type="text"
+        placeholder="Enter lastname"
+        name="lastname"
+        value={props.lastname}
+        onChange={props.onChange}
+        error={props.errors.lastname}
+      />
+      <Field
         id="password"
         labelText="Password"
         type="password"
@@ -34,8 +33,8 @@ const Basic = props => {
         value={props.password}
         onChange={props.onChange}
         error={props.errors.password}
-        />
-        <Field
+      />
+      <Field
         id="repeatPassword"
         labelText="Repeat password"
         type="repeatPassword"
@@ -44,9 +43,8 @@ const Basic = props => {
         value={props.repeatPassword}
         onChange={props.onChange}
         error={props.errors.repeatPassword}
-        />
-  
-      </div>
+      />
+    </div>
     );
   };
   export default Basic;
