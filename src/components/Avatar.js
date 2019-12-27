@@ -1,5 +1,6 @@
 import React from "react"
 import Field from "./Field"
+import DefLogo from "../data/def-avatar.png"
 
      
       
@@ -8,18 +9,21 @@ import Field from "./Field"
           <div>
       <div className="form-group">
         <label htmlFor="avatar"> </label>
-        <img width="100%" src={props.avatar} alt="Ava" />
+        <img className="mb-4" width="100%" src={props.avatar ? props.avatar : DefLogo} alt="Avatar pic" />
+        <div className="custom-file">
         <input
           type="file"
-          className="form-control-file"
-          id="avatar"
-          name="avatar"
+          className="custom-file-input"
+          id="customFile"
+          name="customFile"
           onChange={props.onChangeAvatar}
         />
+        <label className="custom-file-label" htmlFor="customFile">Choose avatar</label>
+        </div>
       </div>
     </div>
         );
       };
   
- 
+      
   export default Avatar;

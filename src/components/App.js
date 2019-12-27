@@ -135,36 +135,32 @@ export default class App extends React.Component {
         <form className="form card-body">
         <div className="steps mb-4">
             <div
-              className={`step ${
-                1 <= this.state.currentStep ? "is-active" : ""
-              }`}
+            className={`step ${1 <= this.state.currentStep ? "is-active" : ""} 
+            ${2 <= this.state.currentStep ? "is-completed" : ""}`}
             >
               <div className="step__marker">1</div>
               <div className="step__title mt-1">Basic</div>
             </div>
 
             <div
-              className={`step ${
-                2 <= this.state.currentStep ? "is-active" : ""
-              }`}
+              className={`step ${2 <= this.state.currentStep ? "is-active" : ""} 
+              ${3 <= this.state.currentStep ? "is-completed" : ""}`}
             >
               <div className="step__marker">2</div>
               <div className="step__title mt-1">Contacts</div>
             </div>
 
             <div
-              className={`step ${
-                3 <= this.state.currentStep ? "is-active" : ""
-              }`}
+            className={`step ${3 <= this.state.currentStep ? "is-active" : ""} 
+            ${4 <= this.state.currentStep ? "is-completed" : ""}`}
             >
               <div className="step__marker">3</div>
               <div className="step__title mt-1">Avatar</div>
             </div>
 
             <div
-              className={`step ${
-                4 <= this.state.currentStep ? "is-active" : ""
-              }`}
+            className={`step ${4 <= this.state.currentStep ? "is-active" : ""} 
+            ${5 <= this.state.currentStep ? "is-completed" : ""}`}
             >
               <div className="step__marker">4</div>
               <div className="step__title mt-1">Finish</div>

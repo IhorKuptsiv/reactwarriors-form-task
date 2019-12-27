@@ -34,11 +34,15 @@ const Contacts = props => {
       value={props.country}
       onChange={props.onChange}
       error={props.errors.country}
-     />  
+      >
+   
+      </select>
+      
+      
    </div>
     <Field
       id="city"
-      labelText="city"
+      labelText="city" 
       name="city"
       value={props.city}
       onChange={props.onChange}
